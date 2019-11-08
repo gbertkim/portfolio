@@ -4,12 +4,11 @@
 const projectPre = {
   1: [`<img src="./img/braintimer_1.png" id="brainTimer" alt="Brain Timer Project Start" class="fullHeight">`,`Brain Timer`, `Brain Timer is a JavaScript, HTML, and CSS quiz with 10 logic questions and brain teasers. Project was designed for the Thinkful course. There is a timer function that will start and stop as you progress through the quiz. The user must complete all questions before the timer hits "0".`, "https://github.com/gbertkim/BrainTimer","https://gbertkim.github.io/BrainTimer/"],
   2: [`<img src="./img/sample_1.png" id="RRN" alt="RRN" class="fullHeight">`,`RRN`, `RRN is a JavaScript, HTML, CSS, Instagram API, and Google Maps API project. RRN is a project that was made for the band Run River North. In 2019, they will go on a Spring Tour. This app allows for the user to track their location via their most recent instagram posts and future concert dates.`,"https://github.com/gbertkim/RRN","https://gbertkim.github.io/RRN/"],
-  3: [`<img src="https://media0.giphy.com/media/l378AEZceMwWboAQE/giphy.gif?cid=3640f6095c4b25013745425967e87bb8" id="example2" alt="Example 2" class="fullHeight">`,`Example 2`, `This is placed as a sample until I can fill this space in my portfolio with actual projects that I have completed.`]
+  3: [`<img src="./img/pooper.png" id="pooper" alt="pooper" class="fullHeight">`,`Pooper`, `Web app created to find clean restrooms around you. Users are able to upload, delte, update, and review bathrooms. Created this ‘yelp-like’ project in 2 weeks from wireframe to uploading onto a server. React.js frontend and Node.js/Express backend`, "https://github.com/gbertkim/pooper", "https://pooper.gbertkim.now.sh/"]
 }
 
 ////////global variables
 let keys = Object.keys(projectPre);
-
 
 //////home
 let pageLoad = function(){
