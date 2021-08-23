@@ -202,7 +202,8 @@ header {
 /* ABOUT SECTION STYLE */
 #about {
   width: 100%;
-  height: auto;
+  height: 90vh;
+  min-height: 800px;
   position: relative;
   align-items: center;
   padding: 4vw;
@@ -229,6 +230,14 @@ header {
 }
 
 @media screen and (min-width: 480px) and (max-width: 679px){
+  header {
+    height: 90vh;
+    min-height: 800px;
+  }
+  .appD {
+    height: 90vh;
+    min-height: 800px;
+  }
   .hoverPhoto {
     width: 55%;
   }
@@ -242,7 +251,15 @@ header {
     font-size: 2.5vw;
   }
 }
-@media screen and (min-width: 680px) and (max-width: 6749px){
+@media screen and (min-width: 680px) and (max-width: 849px){
+  header {
+    height: 90vh;
+    min-height: 800px;
+  }
+  .appD {
+    height: 90vh;
+    min-height: 800px;
+  }
   .hoverPhoto {
     width: 40%;
   }
@@ -250,7 +267,7 @@ header {
     width: 55%;
   }
   #title, #introduction{
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   .listItem, #arrowName, #arrow, .projTitle  {
     font-size: 3vw;
@@ -263,6 +280,14 @@ header {
   }
 }
 @media screen and (min-width: 850px) and (max-width: 1149px){
+  header {
+    height: 90vh;
+    min-height: 800px;
+  }
+  .appD {
+    height: 90vh;
+    min-height: 800px;
+  }
   .hoverPhoto {
     width: 30%;
   }
@@ -273,11 +298,14 @@ header {
     width: 75%;
     font-size: 2vw;
   }
+  .minShow p{
+    margin-bottom: 10px;
+  }
   #title, #introduction{
     font-size: 3vw;
   }
   .listItem, #arrowName, #arrow, .projTitle  {
-    font-size: 2.2vw;
+    font-size: 3vw;
   }
   #about p {
     font-size: 2vw;
@@ -287,6 +315,17 @@ header {
   }
 }
 @media screen and (min-width: 1150px){
+  header {
+    height: 90vh;
+    min-height: 800px;
+  }
+  .appD {
+    height: 90vh;
+    min-height: 800px;
+  }
+  .fullHeight {
+    height: 30vw;
+  }
   .hoverPhoto {
     width: 20%;
   }
@@ -303,16 +342,22 @@ header {
   #about p {
     width: 50%;
   }
+  #about h2 {
+    font-size: 2vw;
+  }
   #title, #introduction{
     font-size: 2.5vw;
   }
-  .listItem, #arrowName, #arrow, .projTitle  {
-    font-size: 1.8vw;
+  .listItem {
+    font-size: 2vw;
   }
-  #about p {
-    font-size: 1.5vw;
+  #arrowName, #arrow, .projTitle  {
+    font-size: 1.3vw;
   }
   #hoverMe {
+    font-size: 1vw;
+  }
+  #about p {
     font-size: 1.5vw;
   }
 }
