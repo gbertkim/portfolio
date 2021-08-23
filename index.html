@@ -6,49 +6,55 @@
     <title>Gilbert's Portfolio</title>
     <meta name="portfolio" content="Gilbert Kim's portfolio">
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,500,800&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <header role="header">
-      <h1 title="Gilbert Kim's Portfolio" role="heading" id="title" class="maxWidth">
-        Hello, my name is <a id="yourName" href="#about" class="links">Gilbert Kim</a> and I am a full-stack web developer and a Thinkful, New York graduate.
-      </h1>
-      <nav role="navigation" class="test">
-        <ul id="navigation">
-          <li><a id="homeNav" role="link" class="links" href="#home">Home</a></li>
-          <li><a id="portfolioNav" role="link" class="links" href="#portfolio">Portfolio</a></li>
-          <li><a id="aboutNav" role="link" class="links" href="#about">About</a></li>
-        </ul>
-      </nav>    
+        <container title="Gilbert Kim's Portfolio" role="heading" id="title">
+          <div class='nameTitles'>Full Stack Web Developer.</div>
+          <div class='nameTitles'>Fantasy B-ball Champion.</div>
+          <div class='nameTitles'>Bass Slapper.</div>
+          <div id='introduction'>
+            Hello, my name is <a href='#'id="yourName" class='hovered'>Gilbert Kim</a>.
+            I enjoy designing <span class='bolder'>Responsive</span> and <span class='bolder'>Accessible</span> web-apps using <span class="codeLang">react</span>, <span class="codeLang">js</span>, <span class="codeLang">html</span>, <span class="codeLang">css</span>, and <span class="codeLang">node</span>.
+            Feel free to checkout my projects and contact me for any inquiries.
+          </div>
+          <a id="arrowButton" href="#portfolio" class="links">
+            <span id='hoverMe'>Hover over orange texts!</span>
+            <span id="arrowName">projects</span>
+            <span id="arrow">&#8595;</span>
+          </a>
+          <ul id='social'>
+            <li class='listItem'><a role="link" target="_blank" href="mailto:gbertkim@gmail.com">e-mail</a></li>
+            <li class='listItem'><a role="link" target="_blank" href="https://github.com/gbertkim/">github</a></li>
+            <li class='listItem'><a role="link" target="_blank" href="www.linkedin.com/in/gbertkim">linked-in</a></li>
+          </ul>
+        </container>
+        <img src='./profile.jpg' alt="Gilbert's Headshot" id='profilePic' class='hoverPhoto'>
     </header>
     <main class="main" role="main">
-      <section role="section" class="part" id="portfolio">   
-          <nav role="navigation" class="portNav">
-            <h3 title="projects" id="projListTitle">Projects</h3>
-            <a role="link" href="#pooper" class="portLinks" data-value="1">Pooper</a>
-            <a role="link" href="#RRN" class="portLinks" data-value="2">RRN</a>
-            <a role="link" href="#brainTimer" class="portLinks" data-value="3">Brain Timer</a>
-          </nav>
+      <section role="section" id="portfolio">   
           <div id="preview">
           </div>
       </section>
-      <section role="section" class="part" id="about">
-        <div class="maxWidth">
-          <h2 title="projects">About</h2>
-          <p>I am skilled in HTML, CSS, and JavaScript and open to learning any language. I have experience with React.js, Node.js, Express.js, Knex.js, JSX, PostgreSQL, and jQuery. I enjoy breaking down large concepts into accessible components and designing solutions that are effective and efficient. My previous experiences in production management and owning a business helps me to prioritize clients needs when designing code.</p><p>Outside of coding, I am a bass-guitar slapper, a grilling and sous-vide enthusiast, a fantasy basketball champion, and a mobile gaming competitor. You can often find me watching hours of "How Stuff Works" and "Bon Appétit". Feel free to look through my projects and contact me.</p>
-          <ul class="contactMe">
-            <li class="contactIcons"><a role="link" target="_blank" href="mailto:gbertkim@gmail.com"><img src="./img/gmail.png" alt="Gmail-Icon" border="0"></a></a></li>
-            <li class="contactIcons"><a role="link" target="_blank" href="https://github.com/gbertkim/"><img src="./img/github.png" alt="github" border="0"></a></li>
-            <li class="contactIcons"><a role="link" target="_blank" href="https://www.linkedin.com/in/gbertkim"><img src="./img/linked.png" alt="linkedIn" border="0"></a></li>
-          </ul>
-        </div>
+      <section role="section" class="about" id="about">
+          <h2 title="about">About</h2>
+          <p>Jazz Bass School &#8594; Owner of <a href='#' id='fashion' class='hovered'>fashion</a> business &#8594; Coding Bootcamp &#8594; Marketing/Online Retail &#8594; ?</p>
+          <p>Leaving high school, I wasn't sure if I wanted to be an accountant or a <a href='#' id='bass' class='hovered'>musician</a>. I knew I had a side that loved being creative, but the other part of me loved data and numbers.</p>
+          <p>After 10 years of working in fashion, <a href='#' id='bags' class='hovered'>marketing</a>, and online retail, I am excited to venture into a career that I can say incorporates both my creative and logical sides.</p>
+          <p>I am skilled in HTML, CSS, and JavaScript and open to learning any language. 
+            I have experience with React.js, Node.js, Express.js, Knex.js, JSX, PostgreSQL, and jQuery. 
+            I enjoy breaking down large concepts into accessible components and designing solutions that are effective and efficient. 
+          <p>My previous experiences in production management and owning a business helps me to prioritize clients needs when designing code.
+            Thanks for listening to my story and I hope to listen to yours soon.</p>
+          <img src='./solo.jpg' alt="solo jeans model" id='soloPhoto' class='hoverPhoto aboutPhoto'>
+          <img src='./bass.jpg' alt="gilbert playing bass" id='bassPhoto' class='hoverPhoto aboutPhoto'>
+          <img src='./bags.gif' alt="miim marketing" id='miimPhoto' class='hoverPhoto aboutPhoto'>
       </section>
-      <!-- <section class="contact">
-        <div class="maxWidth">
-        </div>
-      </section> -->
     </main>
     <script src="script.js"></script>  
   </body>
