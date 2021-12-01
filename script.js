@@ -72,12 +72,21 @@ const overlayFunctions = () => {
   })
 }
 const hoverPhoto = function(){
+  let toggle = 0;
+  if (toggle === 1) {
+    $('header').click(() => {
+      $('.banner').fadeOut(100);
+    })
+  }
   const handlerIn = function (){
+    toggle = 1;
     $('.banner').fadeIn(100);
   }
   const handlerOut = function(){
+    toggle = 0;
     $('.banner').fadeOut(100);
   }
+
   $('#yourName').hover(handlerIn, handlerOut)
 }
 const navigationFunctions = () => {
