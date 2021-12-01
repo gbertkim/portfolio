@@ -54,8 +54,8 @@ header {
   color: rgb(41, 41, 41);
   overflow: hidden;
   z-index: 1;
-  -webkit-mask-image: url(/img/profile.jpg);
-  mask-image:url(/img/profile.jpg);
+  -webkit-mask-image: url(./img/profile.jpg);
+  mask-image:url(./img/profile.jpg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat; 
   -webkit-mask-position: center;
