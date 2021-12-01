@@ -3,30 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 html, body {
+  font-size: 100%;
   height: 100%;
   width: 100%;
   min-width: 320px;
   font-family: 'Karla', sans-serif;
   overflow-y: auto;
+  position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+  scroll-behavior: smooth;
 }
-
 body {
   display: block;
 }
-
 a {
   text-decoration: none;
   color: black;
 }
-a:hover, a:focus {
-  font-weight: 500;
-}
-
 .portNav, header, #preview, #about {
   display: flex;
   flex-direction: column;
+}
+button:hover button:focus {
+  opacity: 50%;
 }
 
 /* Header Styling */
@@ -36,61 +36,108 @@ header {
   align-items: center;
   position: relative;
   background-color:rgb(252, 252, 252);
-  height: 90vh;
-  width: 100vw;
+  height: 95vh;
+  width: 100%;
   color: rgb(41, 41, 41);
+  z-index: 0;
 }
-.blackOut {
-  -webkit-transition: background-color .5s ease-out;
-  -moz-transition: background-color .5s ease-out;
-  -o-transition: background-color .5s ease-out;
-  transition: background-color .5s ease-out;
-  background-color: black;
-  color: black;
+.banner {
+  display: flex;
+  position: absolute;
+  background-color:rgb(252, 252, 252);
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 95vh;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(41, 41, 41);
+  overflow: hidden;
+  z-index: 1;
+  -webkit-mask-image: url(/img/profile.jpg);
+  mask-image:url(/img/profile.jpg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat; 
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 600px;
+  mask-size: 600px;
+  pointer-events: none;
 }
 #title {
-  padding: 4vw;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: lighter;
-  font-size: 5vw;
+  height: 100vh;
+  width: 66%;
+  font-size: 2.5rem;
   line-height: 1.3;
   text-transform: uppercase;
   color: rgb(85, 85, 85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 .nameTitles {
-  margin-top: 2vh;
+  display: none;
+  font-family: 'Space Mono', monospace;
 }
-#introduction {
-  margin-top: 3vh;
-  font-size: 5vw;
-  line-height: 1.5;
+#introduction, #introduction2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
   text-transform: none;
+  line-height: 2;
+  font-weight: lighter;
+}
+#introduction2 {
+  color: white;
 }
 .bolder {
   font-weight: 500;
 }
 .codeLang {
-  text-decoration: underline;
   font-style: italic;
 }
 .hovered {
-  color: rgb(255, 145, 0);
+  font-weight: bold;
+  color: #555555;
+  border-bottom: .3rem solid #5e85fe;
+}
+.hovered:hover, .hovered:focus {
+  cursor: pointer;
+  opacity: 50%;
 }
 #yourName:hover {
-  color: white;
-}
-#yourName:focus, #yourName:hover {
-  font-weight: 300;
+  color: black;
 }
 #social {
+  margin-top: 2.5rem;
   display: flex;
-  flex-direction: column;
-  margin-top: 3vh;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-.listItem {
-  font-size: 4vw;
+.socialIcons {
+  height: 3rem;
+  width: auto;
+}
+
+#email {
+  height: 3.6rem
+}
+.socialList {
   list-style: none;
-  text-transform: none;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.socialList > a {
+  display: block;
+}
+.socialList:hover > a, .socialList:focus > a {
+  opacity: .5;
+  cursor: pointer;
 }
 #arrowButton {
   color: black;
@@ -104,25 +151,92 @@ header {
 }
 #arrowName  {
   text-transform: none;
-  font-size: 4vw;
+  font-size: 1rem;
   font-style: italic;
 }
+#arrowName:hover, #arrowName:focus {
+  font-size: 1.2rem;
+  cursor:pointer;
+}
 #arrow {
-  font-size: 5vw;
+  font-size: 2rem;
 }
 #hoverMe {
-  font-size: 3vw;
+  font-size: 1.2rem;
   font-weight: 500;
   color: rgb(255, 145, 0);
 }
 .hoverPhoto {
   display: none;
+  pointer-events: none;
   position: absolute;
-  width: 70%;
+  width: 50%;
   height: auto;
   left: 50%;
   transform: translate(-50%, -50%);
   bottom: 0;
+}
+#profilePic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: auto;
+  z-index: -1;
+}
+/* NAVIGATION */
+.icons {
+  height: 4rem;
+  width: auto;
+}
+#hamburger, #fries {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-right: 3rem;
+}
+#hamburger:hover, #fries:hover {
+  cursor: pointer;
+}
+#hamburger:hover > .icons, #fries:hover > .icons {
+  opacity: .5;
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background-color: rgb(100, 100, 100);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease-in-out;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 3px 0 15px;
+  z-index: 5;
+}
+.nav-links {
+  list-style: none;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Space Mono' monospace;
+}
+.nav-links > a {
+  color:white;
+}
+.nav-links > a:hover {
+  color: black;
 }
 
 /* PORTFOLIO STYLING */
@@ -130,234 +244,367 @@ header {
   display: flex; 
   width: 100%;
   height: auto;
+  overflow: none;
+  align-items: center;
+  background-color:rgb(252, 252, 252);
 }
 #preview {
   height: 100%;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   overflow-y: auto;
   overflow-x: hidden;
 }
-/* .smoothScroll {
-  scroll-behavior: smooth;
-} */
-.fullHeight {
-  margin-top: 3vh;
-  width: auto;
-  height: 55%;
-}
 
 /* Project */
 .appD {
-  display: block;
-  width: 100%;
-  height: 90vh;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  width: 60vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 3vw;
+  justify-content: center;
   position: relative;
+  overflow: hidden;
+}
+.imageCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 .projTitle {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  color: white;
-  font-family: 'Lora', serif;
-  font-size: 5vw;
-  font-style: italic;
-  margin-left: 4vw;
-  margin-top: 2vh;
-  border-bottom: 1px solid white;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: normal;
+  color: black;
+  font-size: 1.8rem;
+  text-transform: lowercase;
+}
+.projNumber {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  margin-left: 3rem;
+  margin-top: 2rem;
+}
+.projGit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+}
+.projGit:hover, .projGit:focus {
+  opacity: 50%;
+  cursor: pointer;
+}
+.projIcons {
+  height: 3rem;
+  width: auto;
+}
+.previewLinks {
+  height: 97%;
+}
+.previewLinks:hover {
+  cursor: pointer;
+  height: 100%;
+  transition: height .2s ease-in-out;
+}
+.fullHeight {
+  width: auto;
+  height: 100%;
 }
 .minShow {
-  font-family: 'Lora', serif;
-  color: rgb(255, 255, 255);
-  font-size: 3.5vw;
+  width: 50%;
+  font-size: 1rem;
+  margin-top: 1.5rem;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.8;
 }
-#gitLinks {
-  display: block;
-  margin-top: 5vh;
-}
-#gitLinks a{
-  text-transform: uppercase;
-  padding: 15px;
-  margin: 10px;
-  background-color: rgb(245, 106, 106);
+.descOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: white;
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
-#gitLinks a:hover, #gitLinks a:focus {
+.descContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.781);
+}
+.descP {
+  width: 50%;
+  display: block;
+}
+.cancelButt, .openDescButt {
   cursor: pointer;
-  background-color: lightgrey;
-  -webkit-transition: background-color 500ms linear;
-  -ms-transition: background-color 500ms linear;
-  transition: background-color 500ms linear;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+.cancelButt {
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+.openDescButt {
+  margin-top: 1.5rem;
+  margin-right: 2rem;
+}
+.cancelButt:hover, .cancelButt:focus, 
+.openDescButt:hover, .openDescButt:focus {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.cancelButt > img {
+  height: 2rem;
+  width: auto;
+}
+.openDescButt > img {
+  height: 2rem;
+  width: auto;
 }
 
 /* ABOUT SECTION STYLE */
 #about {
   width: 100%;
-  height: 90vh;
-  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   position: relative;
   align-items: center;
   padding: 4vw;
+}
+#aboutTitle {
+  border-bottom: .3rem solid #5e85fe;
+}
+.aboutWrapper {
+  width: 66%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.photoContainer {
+  min-width: 50%;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.aboutContainer {
+  width: 50%;
+  padding: 1rem;
 }
 .about {
   background-color: rgb(252, 252, 252);
   color: black;;
 }
 #about p{
-  font-family: 'Work Sans', sans-serif;
-  font-size: 3vw;
-  font-weight: lighter;  
-  margin-top: 2vh;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: normal;
+  margin-bottom: 1rem;  
 }
 #about h2 {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 500;
+  font-family: 'Space Mono', monospace;
   text-align: center;
-  font-style: italic;
-  border-bottom: 1px solid black;
 }
 .whiteFont {
   color: white;
 }
+.aboutPhoto {
+  width: 400px;
+  height: 500px;
+  border: 1px solid rgb(209, 209, 209);
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  background-color: white;
+  padding: 1rem;
+}
 
-@media screen and (min-width: 480px) and (max-width: 679px){
-  header {
-    height: 90vh;
-    min-height: 800px;
-  }
-  .appD {
-    height: 90vh;
-    min-height: 800px;
-  }
-  .hoverPhoto {
-    width: 55%;
-  }
-  .aboutPhoto {
-    width: 65%;
-  }
-  .projTitle {
-    font-size: 3.5vw;
-  }
-  .minShow {
-    font-size: 2.5vw;
+.bg1 {
+  background-image: url(/img/peace.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #5e85fe;
+}
+.bg2 {
+  background-image: url(/img/solo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-size: contain;
+  background-color: #fad1bf;
+  transition: background-image 1s eas-in-out;
+}
+.bg3 {
+  background-image: url(/img/bass.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-size: contain;
+  background-color: #a9a9a9;
+  transition: background-image 1s eas-in-out;
+}
+.bg4 {
+  background-image: url(/img/bags.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: background-image 1s eas-in-out;
+  background-color: #5e85fe;
+  background-origin: content-box;
+}
+@media screen and (max-width:1500px) {
+  .aboutWrapper {
+    width: 90%;
   }
 }
-@media screen and (min-width: 680px) and (max-width: 849px){
-  header {
-    height: 90vh;
-    min-height: 800px;
-  }
-  .appD {
-    height: 90vh;
-    min-height: 800px;
-  }
-  .hoverPhoto {
-    width: 40%;
-  }
-  .aboutPhoto {
-    width: 55%;
-  }
-  #title, #introduction{
-    font-size: 3.5vw;
-  }
-  .listItem, #arrowName, #arrow, .projTitle  {
-    font-size: 3vw;
-  }
-  #about p{
-    font-size: 2.5vw;
-  }
-  #hoverMe {
-    font-size: 2vw;
-  }
-}
-@media screen and (min-width: 850px) and (max-width: 1149px){
-  header {
-    height: 90vh;
-    min-height: 800px;
-  }
-  .appD {
-    height: 90vh;
-    min-height: 800px;
-  }
-  .hoverPhoto {
-    width: 30%;
-  }
-  .aboutPhoto {
-    width: 40%;
-  }
-  .minShow {
-    width: 75%;
-    font-size: 2vw;
-  }
-  .minShow p{
-    margin-bottom: 10px;
-  }
-  #title, #introduction{
-    font-size: 3vw;
-  }
-  .listItem, #arrowName, #arrow, .projTitle  {
-    font-size: 3vw;
-  }
-  #about p {
-    font-size: 2vw;
-  }
-  #hoverMe {
-    font-size: 1.5vw;
-  }
-}
-@media screen and (min-width: 1150px){
-  header {
-    height: 90vh;
-    min-height: 800px;
-  }
-  .appD {
-    height: 90vh;
-    min-height: 800px;
-  }
-  .fullHeight {
-    height: 55%;
-  }
-  .hoverPhoto {
-    width: 20%;
-  }
-  .aboutPhoto {
-    width: 25%;
-  }
-  .minShow {
-    width: 50%;
-    font-size: 1.5vw;
-  }
-  #about {
+@media screen and (min-width: 975px) and (max-width: 1200px){
+  .aboutWrapper {
     width: 100%;
   }
+}
+@media screen and (max-width: 975px) {
+  .aboutWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .photoContainer {
+    width: 100%;
+    height: auto;
+  }
+  .aboutPhoto {
+    width: 360px;
+    height: 250px;
+  }
+  .aboutContainer {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .bg1{
+    background-image: url(/img/peace2.png);
+  }
+}
+
+@media screen and (max-width: 950px){
+  html, body {
+    font-size: 14px;
+  }
+  #title {
+    width: 90%;
+  }
+  .appD {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html, body {
+    font-size: 10px;
+  }
+  #title {
+    width: 90%;
+  }
+  .appD {
+    width: 95vw;
+    height: 95vw;
+  }
+  .previewLinks {
+    height: 80%;
+  }
+  .previewLinks:hover {
+    height: 85%;
+  }
+  .aboutWrapper {
+    height: 100vh;
+    justify-content: flex-start;
+  }
   #about p {
-    width: 50%;
+    font-size: 16px;
+    line-height: 1.5;
   }
-  #about h2 {
-    font-size: 2vw;
+  .aboutContainer {
+    padding: .5rem;
+    height: auto;
   }
-  #title, #introduction{
-    font-size: 2.5vw;
+  .aboutPhoto {
+    width: 360px;
+    height: 250px;
   }
-  .listItem {
-    font-size: 2vw;
+  .photoContainer {
+    padding-top: 0;
   }
-  #arrowName, #arrow, .projTitle  {
-    font-size: 1.3vw;
+  #profilePic {
+    width: 300px;
+    height: 300px;
   }
-  #hoverMe {
-    font-size: 1vw;
+  .banner {
+    -webkit-mask-size: 300px;
+    mask-size: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #introduction, #introduction2 {
+    font-size: 2rem;
+  }
+  .aboutPhoto {
+    width: 210px;
+    height: 150px;
+    box-shadow: 10px 10px rgba(0,0,0,.15);
+  }
+  .photoContainer {
+    padding: 0 0 1.2rem 0;
   }
   #about p {
-    font-size: 1.5vw;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  #profilePic {
+    width: 250px;
+    height: 250px;
+  }
+  .banner {
+    -webkit-mask-size: 250px;
+    mask-size: 250px;
+  }
+  #hamburger, #fries {
+    margin-top: 1rem;
+    margin-right: 1rem;
   }
 }
