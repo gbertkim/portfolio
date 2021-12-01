@@ -455,36 +455,33 @@ header {
 }
 
 .bg1 {
-  background-image: url(/img/peace.png);
+  background-image: url(./img/peace.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #5e85fe;
 }
 .bg2 {
-  background-image: url(/img/solo.jpg);
+  background-image: url(./img/solo.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-origin: content-box;
   background-size: contain;
   background-color: #fad1bf;
-  transition: background-image 1s eas-in-out;
 }
 .bg3 {
-  background-image: url(/img/bass.jpg);
+  background-image: url(./img/bass.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-origin: content-box;
   background-size: contain;
   background-color: #a9a9a9;
-  transition: background-image 1s eas-in-out;
 }
 .bg4 {
-  background-image: url(/img/bags.gif);
+  background-image: url(./img/bags.gif);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  transition: background-image 1s eas-in-out;
   background-color: #5e85fe;
   background-origin: content-box;
 }
@@ -517,7 +514,7 @@ header {
     font-size: 1rem;
   }
   .bg1{
-    background-image: url(/img/peace2.png);
+    background-image: url(./img/peace2.png);
   }
 }
 
