@@ -44,17 +44,17 @@ const loadPreview = function(){
   for (let i=0; i<keys.length; i++){
     $('#preview').append(`
       <div class="appD" id="appD${i}">
-      <div class="projInfo">
-        <h3 class='projTitle'>${projectPre[i].title}</h3>
-        <p class='projDesc'>${projectPre[i].description}
-        <p class='projCode'>${projectPre[i].code}</p>
-      </div>
+        <div class="projInfo">
+          <h3 class='projTitle'>${projectPre[i].title}</h3>
+          <p class='projDesc'>${projectPre[i].description}
+          <p class='projCode'>${projectPre[i].code}</p>
+        </div>
         <div class='imageCont'>
           <a class="previewLinks" data-value="${i}">${projectPre[i].img}</a>
         </div>
         <div class='projLinks'>
-        <a class='projGit' role="link" target="_blank" href="${projectPre[i].github}">View Live</a>
-        <a class='projGit' role="link" target="_blank" href="${projectPre[i].web}">View Code</a>
+          <a class='projGit' role="link" target="_blank" href="${projectPre[i].github}">View Live</a>
+          <a class='projGit' role="link" target="_blank" href="${projectPre[i].web}">View Code</a>
         </div>
       </div>
     `)

@@ -286,8 +286,14 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 70%;
+  height: 65%;
   width: 100%;
+}
+.fullHeight {
+  width: auto;
+  height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 .projInfo {
   padding-top: 2rem;
@@ -300,16 +306,16 @@ header {
 .projTitle {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .projDesc {
   font-family: 'Space Mono', monospace;
-  font-size: 1.5rem;  
+  font-size: 1.2rem;  
   font-weight: bold;
 }
 .projCode {
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .projShort {
   font-family: 'Space Mono', monospace;
@@ -323,7 +329,6 @@ header {
   align-items: center;
   justify-content: center;
 }
-
 .projLinks {
   position: absolute;
   bottom: 0;
@@ -356,21 +361,6 @@ header {
 }
 .previewLinks:hover {
   cursor: pointer;
-}
-.fullHeight {
-  width: auto;
-  height: 100%;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-}
-.minShow {
-  width: 50%;
-  font-size: 1rem;
-  margin-top: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  line-height: 1.8;
 }
 
 /* ABOUT SECTION STYLE */
