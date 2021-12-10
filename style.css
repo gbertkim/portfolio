@@ -109,10 +109,10 @@ header {
 #yourName:hover {
   color: black;
 }
-#contactLink {
+/* #contactLink {
   font-weight: bold;
   border-bottom: .3rem solid #5e85fe;
-}
+} */
 #social {
   margin-top: 2.5rem;
   display: flex;
@@ -292,8 +292,7 @@ header {
 .fullHeight {
   width: auto;
   height: 100%;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding: 1.5rem;
 }
 .projInfo {
   padding-top: 2rem;
@@ -310,12 +309,12 @@ header {
 }
 .projDesc {
   font-family: 'Space Mono', monospace;
-  font-size: 1.2rem;  
-  font-weight: bold;
+  font-size: 1.6rem;  
+  margin-bottom: .4rem;
 }
 .projCode {
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .projShort {
   font-family: 'Space Mono', monospace;
