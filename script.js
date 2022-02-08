@@ -53,8 +53,8 @@ const loadPreview = function(){
           <a class="previewLinks" data-value="${i}">${projectPre[i].img}</a>
         </div>
         <div class='projLinks'>
-          <a class='projGit' role="link" target="_blank" href="${projectPre[i].github}">View Live</a>
-          <a class='projGit' role="link" target="_blank" href="${projectPre[i].web}">View Code</a>
+          <a class='projGit' role="link" target="_blank" href="${projectPre[i].github}">View Code</a>
+          <a class='projGit' role="link" target="_blank" href="${projectPre[i].web}">View Live</a>
         </div>
       </div>
     `)
