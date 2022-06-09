@@ -22,13 +22,13 @@ const projectPre = [
 
   },
   {
-    img: `<img src="./img/RRN.png" id="RRN" alt="RRN app screenshot" class="fullHeight">`,
-    title: `RRN`, 
-    description: `Track RRN on their spring tour.`,
-    code: 'JavaScript/HTML/CSS/Instagram & Google Maps API.', 
-    github: "https://github.com/gbertkim/RRN", 
-    web: "https://gbertkim.github.io/RRN/",
-    short: 'band tracker'
+    img: `<img src="./img/Yeezus-mock.png" id="yeezus" alt="yeezus app screenshot" class="fullHeight">`,
+    title: `THE DAILY YEEZUS`, 
+    description: `Kanye reads random bible verses`,
+    code: 'TypeScript/React/Uberduck API', 
+    github: "https://github.com/gbertkim/TheDailyYeezus", 
+    web: "https://yeezus-gbertkim.vercel.app/",
+    short: 'yeezus'
   }
 ]
 const bgColors = {
