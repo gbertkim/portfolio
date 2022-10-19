@@ -63,6 +63,7 @@ const loadPreview = function(){
 }
 const hoverPhoto = () => {
   $('#yourName').click((e)=> { 
+    console.log('clicked')
     $('.banner').fadeIn(100);
     e.stopPropagation();
   });
